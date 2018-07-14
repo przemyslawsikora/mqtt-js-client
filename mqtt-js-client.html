@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <script src="paho-mqtt-min.js" type="text/javascript"></script>
+    <script src="logic.js" type="text/javascript"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div class="wrapper">
+    <div style="width: 100%; margin: 20px;">
+        <div style="display: flex; flex-direction: row;">
+            <div style="display: flex; flex-direction: column; width: 400px; margin-right: 10px;">
+                <label for="brokerHostInput">MQTT server host</label>
+                <input id="brokerHostInput" type="text" value="192.168.99.100"></div>
+            <div style="display: flex; flex-direction: column; width: 200px; margin-right: 10px;">
+                <label for="brokerPortInput">MQTT server port</label>
+                <input id="brokerPortInput" type="text" value="8083">
+            </div>
+            <div style="display: flex; flex-direction: column; width: 200px; margin-right: 10px;">
+                <label for="brokerPathInput">Path</label>
+                <input id="brokerPathInput" type="text" value="/mqtt">
+            </div>
+            <div style="display: flex; flex-direction: column; width: 200px;">
+                <label for="mqttClientIdInput">MQTT client ID</label>
+                <input id="mqttClientIdInput" type="text" value="web-client">
+            </div>
+        </div>
+        <div style="display: flex; flex-direction: row;">
+            <button id="connectButton" class="button" style="margin-right: 10px;"
+                    onclick="connect()">Connect
+            </button>
+            <button id="disconnectButton" class="button" style="margin-right: 10px;"
+                    onclick="disconnect()" disabled>
+                Disconnect
+            </button>
+        </div>
+    </div>
+    <div style="display: flex; flex-direction: row;">
+        <div style="width: 50%; margin: 20px; float: left;">
+            <label for="outputTopicInput">Output MQTT topic</label>
+            <input id="outputTopicInput" type="text" value="topic-demo" disabled>
+            <label for="outputMessageTextArea">Message</label>
+            <textarea id="outputMessageTextArea" disabled></textarea>
+            <button id="sendMessageButton" class="button" onclick="sendMessage()" disabled>Send message</button>
+        </div>
+        <div style="width: 50%; margin: 20px; float: right;">
+            <label for="inputTopicInput">Input MQTT topic</label>
+            <div style="display:flex; flex-direction: row">
+                <input id="inputTopicInput" type="text" style="width: 400px; margin-right: 10px"
+                       value="topic-demo" disabled>
+                <button id="subscribeTopicButton" class="button" onclick="subscribeTopic()" disabled>Subscribe topic
+                </button>
+            </div>
+            <label for="inputMessagesTextArea">Messages</label>
+            <textarea id="inputMessagesTextArea" disabled></textarea>
+        </div>
+    </div>
+    <span id="log" class="log"></span>
+</div>
+</body>
+</html>
