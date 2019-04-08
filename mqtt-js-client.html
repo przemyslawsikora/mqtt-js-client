@@ -10,9 +10,9 @@
 <div class="wrapper">
     <div style="width: 100%; margin: 20px;">
         <div style="display: flex; flex-direction: row;">
-            <div style="display: flex; flex-direction: column; width: 400px; margin-right: 10px;">
+            <div style="display: flex; flex-direction: column; width: 410px; margin-right: 10px;">
                 <label for="brokerHostInput">MQTT server host</label>
-                <input id="brokerHostInput" type="text" value="192.168.99.100"></div>
+                <input id="brokerHostInput" type="text" value="127.0.0.1"></div>
             <div style="display: flex; flex-direction: column; width: 200px; margin-right: 10px;">
                 <label for="brokerPortInput">MQTT server port</label>
                 <input id="brokerPortInput" type="text" value="8083">
@@ -26,6 +26,16 @@
                 <input id="mqttClientIdInput" type="text" value="web-client">
             </div>
         </div>
+		<div style="display: flex; flex-direction: row;">
+		    <div style="display: flex; flex-direction: column; width: 200px; margin-right: 10px;">
+			    <label for="mqttClientUsername">Username</label>
+                <input id="mqttClientUsername" type="text">
+			</div>
+		    <div style="display: flex; flex-direction: column; width: 200px;">
+			    <label for="mqttClientPassword">Password</label>
+                <input id="mqttClientPassword" type="text">
+			</div>
+		</div>
         <div style="display: flex; flex-direction: row;">
             <button id="connectButton" class="button" style="margin-right: 10px;"
                     onclick="connect()">Connect

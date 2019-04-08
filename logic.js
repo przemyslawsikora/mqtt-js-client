@@ -33,11 +33,17 @@ function connect() {
     var brokerPort = parseInt(document.getElementById('brokerPortInput').value);
     var brokerPathInput = document.getElementById('brokerPathInput').value;
     var mqttClientIdInput = document.getElementById('mqttClientIdInput').value;
+	var mqttClientUsername = document.getElementById('mqttClientUsername').value;
+	var mqttClientPassword = document.getElementById('mqttClientPassword').value;
     try {
         client = new Paho.MQTT.Client(brokerHost, brokerPort, brokerPathInput, mqttClientIdInput);
         client.onConnectionLost = onConnectionLost;
         client.onMessageArrived = onMessageArrived;
-        client.connect({onSuccess: onConnect, onFailure: onFailure});
+	    if(mqttClientUsername === "" || mqttClientPassword === "") {
+            client.connect({onSuccess: onConnect, onFailure: onFailure});
+		} else {
+		    client.connect({onSuccess: onConnect, onFailure: onFailure, userName: mqttClientUsername, password: mqttClientPassword});
+		}
         setElementStatuses(1);
     } catch (err) {
         log("ERROR: " + err.message);
@@ -101,6 +107,12 @@ function setElementStatuses(connectionStatus) {
     document.getElementById('sendMessageButton').disabled = !connected;
     document.getElementById('inputTopicInput').disabled = !connected;
     document.getElementById('subscribeTopicButton').disabled = !connected;
+	document.getElementById('brokerHostInput').disabled = connected;
+	document.getElementById('brokerPortInput').disabled = connected;
+	document.getElementById('brokerPathInput').disabled = connected;
+	document.getElementById('mqttClientIdInput').disabled = connected;
+	document.getElementById('mqttClientUsername').disabled = connected;
+	document.getElementById('mqttClientPassword').disabled = connected;
 }
 
 function log(message) {
