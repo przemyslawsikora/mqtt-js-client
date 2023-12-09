@@ -1,16 +1,16 @@
-<mxfile host="app.diagrams.net" modified="2023-12-09T11:41:36.128Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.1.2 Safari/605.1.15" etag="Jbt2HqzC15sA7sKmr2fP" version="22.1.7" type="github">
+<mxfile host="app.diagrams.net" modified="2023-12-09T11:45:31.537Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.1.2 Safari/605.1.15" etag="NpdIBCHdXoYU_n6r0L8U" version="22.1.7" type="github">
   <diagram name="Strona-1" id="ckVpKhGzKj2DJ2V9zyn5">
-    <mxGraphModel dx="953" dy="698" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="953" dy="698" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="r4GNfY-EmTeGSq--_zNR-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="r4GNfY-EmTeGSq--_zNR-1" target="r4GNfY-EmTeGSq--_zNR-2">
+        <mxCell id="r4GNfY-EmTeGSq--_zNR-3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;fontColor=default;strokeColor=#006658;" parent="1" source="r4GNfY-EmTeGSq--_zNR-1" target="r4GNfY-EmTeGSq--_zNR-2" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="r4GNfY-EmTeGSq--_zNR-1" value="A" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="r4GNfY-EmTeGSq--_zNR-1" value="A" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#21C0A5;strokeColor=#006658;fontColor=#5C5C5C;" parent="1" vertex="1">
           <mxGeometry x="200" y="200" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="r4GNfY-EmTeGSq--_zNR-2" value="B" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+        <mxCell id="r4GNfY-EmTeGSq--_zNR-2" value="B" style="rounded=1;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#21C0A5;strokeColor=#006658;fontColor=#5C5C5C;" parent="1" vertex="1">
           <mxGeometry x="450" y="200" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
